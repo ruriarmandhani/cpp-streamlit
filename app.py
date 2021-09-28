@@ -4,13 +4,12 @@ import pandas as pd
 import plotter
 import re
 import streamlit as st
-import subprocess
 import sys
 import tensorflow as tf
-import pickle
 
 from contextlib import contextmanager
 from datetime import datetime, timedelta
+from downloader import download
 from io import StringIO
 from matplotlib import pyplot as plt
 from model import preprocessing, train_model, eval_model, forecast
@@ -230,10 +229,7 @@ def main():
             if button:
                 try:
                     # print('Updating DataFrame...')
-                    with st_stdout('code'):
-                        output = subprocess.run(['python', 'downloader.py', symbol, 
-                            gen_start_date, gen_end_date], shell=True)
-                        print(output)
+                    download(symbol, gen_start_date, gen_end_date)
                     # print('Done.')
                     status.empty()
                     st.success(f'{symbol} dataframe has been successfully generated.')

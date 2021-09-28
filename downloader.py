@@ -1,4 +1,3 @@
-import sys
 import pandas as pd
 import calendar
 from datetime import datetime
@@ -6,7 +5,7 @@ from multiprocessing import Pool, cpu_count
 from functools import partial
 from utils import download_to_csv, update_log
 
-def main(symbol:str, start_date:str, end_date:str):
+def download(symbol:str, start_date:str, end_date:str):
     year_end = int(end_date.split('-')[0])
     month_end = int(end_date.split('-')[1])
     last_day = calendar.monthrange(year_end, month_end)[1]
@@ -30,10 +29,3 @@ def main(symbol:str, start_date:str, end_date:str):
     max_date = df['date'].max().strftime('%Y-%m-%d')
     df.to_csv(f'./binance/{symbol}-price.csv', index=False)
     update_log(f'{symbol}-1d-{min_date}-to-{max_date}')
-
-
-if __name__ == '__main__':
-    symbol = str(sys.argv[1])
-    start = str(sys.argv[2])
-    end = str(sys.argv[3])
-    main(symbol,start, end)

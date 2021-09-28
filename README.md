@@ -1,2 +1,4 @@
 # cpp-streamlit
-cryptocurrency price prediction (cpp) streamlit web app with neural networks model
+Cryptocurrency Price Prediction (CPP) using neural networks model made with Streamlit Web App Framework.
+
+Test it out here: https://cpp-streamlit.herokuapp.com/

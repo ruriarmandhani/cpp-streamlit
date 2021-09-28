@@ -229,10 +229,12 @@ def main():
 
             if button:
                 try:
-                    print('Updating DataFrame...')
-                    subprocess.run(['python', 'downloader.py', symbol, 
-                        gen_start_date, gen_end_date], shell=True)
-                    print('Done.')
+                    # print('Updating DataFrame...')
+                    with st_stdout('code'):
+                        output = subprocess.run(['python', 'downloader.py', symbol, 
+                            gen_start_date, gen_end_date], shell=True)
+                        print(output)
+                    # print('Done.')
                     status.empty()
                     st.success(f'{symbol} dataframe has been successfully generated.')
                 except:

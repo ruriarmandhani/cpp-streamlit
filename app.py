@@ -192,7 +192,8 @@ def main():
                 [Scikit-Learn](https://scikit-learn.org/stable/modules/classes.html)
             * Data visualization: [Seaborn](https://seaborn.pydata.org/api.html),
                 [Matplotlib](https://matplotlib.org/stable/contents.html)
-            * Source code: [https://github.com/ruriarmandhani](https://github.com/ruriarmandhani)
+            * Source code: [https://github.com/ruriarmandhani/cpp-streamlit]
+                (https://github.com/ruriarmandhani/cpp-streamlit)
             """, unsafe_allow_html=True)
 
     elif radio == 'Data':

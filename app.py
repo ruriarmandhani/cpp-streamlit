@@ -187,7 +187,7 @@ def main():
                 (https://api.binance.com/api/v3/exchangeInfo)
             * Web app framework: [Streamlit](https://docs.streamlit.io/)
             * Neural networks model: [TensorFlow](https://www.tensorflow.org/api_docs/python/tf/)
-            * Data maniplation and preprocessing:
+            * Data manipulation and preprocessing:
                 [Pandas](https://pandas.pydata.org/docs/reference/index.html),
                 [NumPy](https://numpy.org/doc/stable/reference/index.html),
                 [Scikit-Learn](https://scikit-learn.org/stable/modules/classes.html)

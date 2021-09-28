@@ -230,7 +230,7 @@ def main():
             if button:
                 try:
                     print('Updating DataFrame...')
-                    subprocess.run(['py', 'downloader.py', symbol, 
+                    subprocess.run(['python', 'downloader.py', symbol, 
                         gen_start_date, gen_end_date], shell=True)
                     print('Done.')
                     status.empty()
